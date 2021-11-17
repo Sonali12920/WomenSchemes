@@ -1,11 +1,12 @@
 import './App.css';
-import Header from './Components/Header'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarComponent from './Components/NavbarComponent'
 import Footer from './Components/Footer'
 
 function App() {
   return (
     <>
-    <Header title="WomenSchemes" searchBar = {true}/>
+    <NavbarComponent/>
     <Footer/>
     </>
   );
