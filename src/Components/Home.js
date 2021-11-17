@@ -1,11 +1,13 @@
 import React from "react";
 import Filters from "./Filters";
+import Header from "./Header"
+import "../App.css";
 
 export default function Home() {
   return (
     <div>
       <div class="container-fluid">
-        Home
+        <Header />
         <div class="row">
           <div class="col-3">
             <Filters />
