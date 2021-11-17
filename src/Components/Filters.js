@@ -89,7 +89,7 @@ function Filters() {
       </ul>
       <ul class="list-group">
         <li class="list-group-item">
-          Current Level
+          Current Level:
           <ul class="list-group">
             <li class="list-group-item">
               <div>
