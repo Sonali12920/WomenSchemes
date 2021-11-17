@@ -1,12 +1,14 @@
-import './App.css';
-import Header from './Components/Header'
-import Footer from './Components/Footer'
+import "./App.css";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-    <Header title="WomenSchemes" searchBar = {true}/>
-    <Footer/>
+      <Header title="WomenSchemes" searchBar={true} />
+      <Home />
+      <Footer />
     </>
   );
 }
