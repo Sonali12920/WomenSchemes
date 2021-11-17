@@ -20,7 +20,7 @@ export default function NavbarComponent() {
             <Router>
                 <div>
                     <Navbar bg="dark" variant={"dark"} expand="lg">
-                        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                        <Navbar.Brand style ={{ margin:"8px" }} href="#home">Women Schemes</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
@@ -33,14 +33,14 @@ export default function NavbarComponent() {
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                                 </NavDropdown> */}
-                                <Nav.Link as={Link} to={"/fellowships"}>Fellowhips</Nav.Link>
+                                <Nav.Link as={Link} to={"/fellowships"}>Fellowships</Nav.Link>
                                 <Nav.Link as={Link} to={"/internships"}>Internships</Nav.Link>
                                 <Nav.Link as={Link} to={"/research"}>Research</Nav.Link>
                             </Nav>
-                            <Form className="d-flex">
+                            <Form style ={{ margin:"8px" }} className="d-flex">
                                 <FormControl
                                     type="search"
-                                    placeholder="Search"
+                                    placeholder="Search here"
                                     className="me-2"
                                     aria-label="Search"
                                 />
