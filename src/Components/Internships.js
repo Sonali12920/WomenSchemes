@@ -1,17 +1,24 @@
 import React from "react";
 import { Card, Button, CardGroup } from "react-bootstrap";
 import db from "../database/fakedb.json";
-
+import "../styles/Internships.css";
+/*function comparedates(date) {
+  var today = new Date();
+  let D1 = new Date(today);
+  let D2 = new Date(date);
+  if (D1 > D2) return true;
+  else return false;
+}*/
 export default function Internships() {
   return (
     <div>
       <h1>Internships</h1>
-      <CardGroup>
+      <CardGroup className="card-group">
         {db.map((el) => {
           return (
             <div key={el.id} class="w-50">
               {el.type === "intership" ? (
-                <Card>
+                <Card className="card">
                   <h4>{el.name}</h4>
                   <p>{el.desc}</p>
                   <p>
@@ -26,7 +33,9 @@ export default function Internships() {
                     </span>
                     {el["end-date"]}
                   </p>
-                  <Button href={el.link}>Link</Button>
+                  <Button class="btn btn-primary" href={el.link}>
+                    Link
+                  </Button>
                 </Card>
               ) : (
                 ""
