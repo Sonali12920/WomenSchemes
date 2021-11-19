@@ -2,17 +2,16 @@
   {
     "id": 1,
     "name": "Means cum Merit Scholarship for fiancial Aid",
-    "type": "scholarships",
+    "type": "scholarship",
     "apply-date": "12-11-2021",
     "end-date": "01-01-2022",
     "desc": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
     "link": "https://www.google.com/"
   },
-
   {
     "id": 2,
     "name": "National Scholarship",
-    "type": "scholarships",
+    "type": "scholarship",
     "apply-date": "12-10-2021",
     "end-date": "01-11-2022",
     "desc": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
@@ -42,6 +41,24 @@
     "type": "internship",
     "apply-date": "12-11-2021",
     "end-date": "30-11-2021",
+    "desc": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
+    "link": "https://www.google.com/"
+  },
+  {
+    "id": 7,
+    "name": "National Fellowship",
+    "type": "fellowship",
+    "apply-date": "12-10-2021",
+    "end-date": "01-11-2022",
+    "desc": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
+    "link": "https://www.google.com/"
+  },
+  {
+    "id": 8,
+    "name": "PG Fellowship",
+    "type": "fellowship",
+    "apply-date": "17-10-2021",
+    "end-date": "21-11-2022",
     "desc": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
     "link": "https://www.google.com/"
   }
