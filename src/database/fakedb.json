@@ -21,7 +21,7 @@
   {
     "id": 3,
     "name": "Google Internship",
-    "type": "intership",
+    "type": "internship",
     "apply-date": "12-11-2021",
     "end-date": "01-01-2022",
     "desc": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
@@ -30,9 +30,18 @@
   {
     "id": 4,
     "name": "Google Step Internship",
-    "type": "intership",
+    "type": "internship",
     "apply-date": "12-11-2021",
     "end-date": "01-06-2022",
+    "desc": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
+    "link": "https://www.google.com/"
+  },
+  {
+    "id": 5,
+    "name": "MicroSoft Internship",
+    "type": "internship",
+    "apply-date": "12-11-2021",
+    "end-date": "30-11-2021",
     "desc": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
     "link": "https://www.google.com/"
   }

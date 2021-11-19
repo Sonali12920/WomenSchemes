@@ -2,13 +2,15 @@ import React from "react";
 import { Card, Button, CardGroup } from "react-bootstrap";
 import db from "../database/fakedb.json";
 import "../styles/Internships.css";
-/*function comparedates(date) {
+function comparedates(date) {
   var today = new Date();
-  let D1 = new Date(today);
-  let D2 = new Date(date);
-  if (D1 > D2) return true;
-  else return false;
-}*/
+
+  const date1 = new Date(date);
+  const date2 = new Date(today);
+  const diffTime = Math.abs(date2 - date1);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  return diffDays;
+}
 export default function Internships() {
   return (
     <div>
@@ -17,7 +19,7 @@ export default function Internships() {
         {db.map((el) => {
           return (
             <div key={el.id} class="w-50">
-              {el.type === "intership" ? (
+              {el.type === "internship" ? (
                 <Card className="card">
                   <h4>{el.name}</h4>
                   <p>{el.desc}</p>
@@ -29,9 +31,11 @@ export default function Internships() {
                   </p>
                   <p>
                     <span>
-                      <b>Closing date:</b>
+                      <b>Available: </b>
                     </span>
-                    {el["end-date"]}
+                    {comparedates(el["end-date"]) > 0
+                      ? `${comparedates(el["end-date"])} days to go `
+                      : "Closed."}
                   </p>
                   <Button class="btn btn-primary" href={el.link}>
                     Link
