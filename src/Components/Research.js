@@ -1,7 +1,17 @@
 import React from "react";
 import db from "../database/fakedb.json";
 import { Card, Button, CardGroup } from "react-bootstrap";
-import "../styles/Card.css";
+// import "../styles/Card.css";
+
+function comparedates(date) {
+    var today = new Date();
+    const date1 = new Date(date);
+    const date2 = new Date(today);
+    const diffTime = Math.abs(date2 - date1);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays;
+  }
+  
 
 export default function Research() {
   return (
@@ -25,6 +35,7 @@ export default function Research() {
                     <span>
                       <b>Available: </b>
                     </span>
+                    {comparedates(el["end-date"])} days to go
                   </p>
                   <Button class="btn btn-primary" href={el.link}>
                     Link
