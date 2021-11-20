@@ -15,50 +15,44 @@ function comparedates(date) {
 export default function Fellowships() {
   return (
     <div>
-      <h1  style={{textAlign:"center", margin:"4px"}}>Fellowships</h1>
+      <h1 style={{ textAlign: "center", margin: "4px" }}>Fellowships</h1>
       <CardGroup className="card-group">
         {db.map((el) => {
           return (
-            <div key={el.id} class="w-50">
-              {el.type === "fellowship" && comparedates(el["end-date"]) > 0  ? (
-                <Card className="card">
-                  <h4>{el.name}</h4>
-                  <p>{el.desc}</p>
-                  <p>
-                    <span>
-                      <b>Apply date:</b>
-                    </span>
-                    {el["apply-date"]}
-                  </p>
-                  <p>
-                    <span>
-                      <b>Available: </b>
-                    </span>
-                    {comparedates(el["end-date"])} days to go
-                    {/* {comparedates(el["end-date"]) > 0
+            <>
+              {el.type === "fellowship" && comparedates(el["end-date"]) > 0 ? (
+                <div key={el.id} class="w-50" className="col-sm-4">
+                  <Card className="card">
+                    <h4>{el.name}</h4>
+                    <p>{el.desc}</p>
+                    <p>
+                      <span>
+                        <b>Apply date:</b>
+                      </span>
+                      {el["apply-date"]}
+                    </p>
+                    <p>
+                      <span>
+                        <b>Available: </b>
+                      </span>
+                      {comparedates(el["end-date"])} days to go
+                      {/* {comparedates(el["end-date"]) > 0
                       ? `${comparedates(el["end-date"])} days to go `
                       : "Closed."} */}
-                  </p>
-                  <Button class="btn btn-primary" href={el.link}>
-                    Link
-                  </Button>
-                </Card>
-              ) : (
-                ""
-              )}
-            </div>
+                    </p>
+                    <Button class="btn btn-primary" href={el.link}>
+                      Link
+                    </Button>
+                  </Card>
+                </div>
+              ) : null}
+            </>
           );
         })}
       </CardGroup>
     </div>
   );
 }
-
-
-
-
-
-
 
 // import React from 'react'
 
