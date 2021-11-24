@@ -20,7 +20,7 @@ export default function Fellowships() {
         {db.map((el) => {
           return (
             <>
-              {el.type === "fellowship" && comparedates(el["end-date"]) > 0 ? (
+              {el.type === "fellowship" && comparedates(el["end_date"]) > 0 ? (
                 <div key={el.id} class="w-50" className="col-sm-4">
                   <Card className="card">
                     <h4>{el.name}</h4>
@@ -29,13 +29,13 @@ export default function Fellowships() {
                       <span>
                         <b>Apply date:</b>
                       </span>
-                      {el["apply-date"]}
+                      {el["apply_date"]}
                     </p>
                     <p>
                       <span>
                         <b>Available: </b>
                       </span>
-                      {comparedates(el["end-date"])} days to go
+                      {comparedates(el["end_date"])} days to go
                       {/* {comparedates(el["end-date"]) > 0
                       ? `${comparedates(el["end-date"])} days to go `
                       : "Closed."} */}

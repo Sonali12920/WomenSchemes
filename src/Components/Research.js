@@ -36,13 +36,13 @@ export default function Research() {
                       <span>
                         <b>Apply date:</b>
                       </span>
-                      {el["apply-date"]}
+                      {el["apply_date"]}
                     </p>
                     <p>
                       <span>
                         <b>Available: </b>
                       </span>
-                      {comparedates(el["end-date"])} days to go
+                      {comparedates(el["end_date"])} days to go
                     </p>
                     <Button class="btn btn-primary" href={el.link}>
                       Link
