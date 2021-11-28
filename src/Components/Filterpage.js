@@ -86,8 +86,8 @@ const Filterpage = () => {
         />
       </div>
       <div>
-        {filteredcards.length === null ? (
-          <span>No Results../</span>
+        {filteredcards.length === 0 ? (
+          <span style={{ color: "red" }}>No Results...</span>
         ) : (
           filteredcards.map((el) => {
             return <>{CardComp(el)}</>;
