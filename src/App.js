@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <NavbarComponent />
-      <KommunicateChat />
+//       <KommunicateChat />
       <Footer />
     </>
   );
