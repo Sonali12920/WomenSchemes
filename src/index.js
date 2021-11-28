@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
+// import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
 
-Kommunicate.init("275ecf24ba27f07d32ece8cc2994daa68", true, true);
+// Kommunicate.init("275ecf24ba27f07d32ece8cc2994daa68", true, true);
 ReactDOM.render(
   <React.StrictMode>
     <App />
