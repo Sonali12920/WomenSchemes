@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import db from "../database/fakedb.json";
 import Filter from "./Filters";
 import { useFilter } from "../utility/useFilter";
+import CardComp from "../Components/CardComponent";
 
 function filteringcards(db, filters) {
   let res = [...db];
@@ -53,7 +54,7 @@ const Filterpage = () => {
   return (
     <div>
       <h5>Filter </h5>
-      <div>
+      <div class="filterblock">
         <p>Type: </p>
         <Filter
           id="scholarship"
@@ -85,9 +86,13 @@ const Filterpage = () => {
         />
       </div>
       <div>
-        {filteredcards.map((el) => {
-          return <p>{el.name}</p>;
-        })}
+        {filteredcards.length === null ? (
+          <span>No Results../</span>
+        ) : (
+          filteredcards.map((el) => {
+            return <>{CardComp(el)}</>;
+          })
+        )}
       </div>
     </div>
   );

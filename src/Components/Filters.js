@@ -5,18 +5,17 @@ import { InputGroup } from "react-bootstrap";
 function Filters({ id, name, checked, label, onChange }) {
   return (
     <div>
-      <InputGroup>
-        <InputGroup>
-          <InputGroup.Radio
-            type="checkbox"
-            id={id}
-            name={name}
-            checked={checked}
-            onChange={onChange}
-          />
-          <label htmlFor={id}>{label}</label>
-        </InputGroup>
+      <InputGroup size="sm">
+        <InputGroup.Radio
+          type="checkbox"
+          id={id}
+          name={name}
+          checked={checked}
+          onChange={onChange}
+        />
+        <label htmlFor={id}>{label}</label>
       </InputGroup>
+
       <br />
     </div>
   );
