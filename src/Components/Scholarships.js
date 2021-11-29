@@ -1,7 +1,17 @@
 import React from "react";
-import db from "../database/items.json";
+// import db from "../database/items.json";
+import db from "../database/boldtable.json";
 import "../styles/CardComponent.css";
 import { Card, Button, CardGroup } from "react-bootstrap";
+
+function comparedates(date) {
+  var today = new Date();
+  const date1 = new Date(date);
+  const date2 = new Date(today);
+  const diffTime = Math.abs(date2 - date1);
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  return diffDays;
+}
 
 export default function Scholarships() {
   return (
@@ -17,6 +27,18 @@ export default function Scholarships() {
                   <Card className="card">
                     <h4>{el.title}</h4>
                     <p>{el.content}</p>
+                    <p>
+                      <span>
+                        <b>Amount: </b>
+                      </span>
+                      {el.amount}
+                    </p>
+                    <p>
+                      <span>
+                        <b>Available: </b>
+                      </span>
+                      {comparedates(el.deadline)} days to go
+                    </p>
 
                     <Button class="btn btn-primary" href={el.links}>
                       Link
@@ -29,7 +51,7 @@ export default function Scholarships() {
           })}
         </CardGroup>
       </div>
-    </div>
+    </div >
   );
 }
 
