@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/WomenSchemes/static/css/main.980250b9.chunk.css",
-    "main.js": "/WomenSchemes/static/js/main.a816c305.chunk.js",
-    "main.js.map": "/WomenSchemes/static/js/main.a816c305.chunk.js.map",
+    "main.js": "/WomenSchemes/static/js/main.e5554869.chunk.js",
+    "main.js.map": "/WomenSchemes/static/js/main.e5554869.chunk.js.map",
     "runtime-main.js": "/WomenSchemes/static/js/runtime-main.2f14d331.js",
     "runtime-main.js.map": "/WomenSchemes/static/js/runtime-main.2f14d331.js.map",
     "static/css/2.383c0125.chunk.css": "/WomenSchemes/static/css/2.383c0125.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.383c0125.chunk.css",
     "static/js/2.53bad2cb.chunk.js",
     "static/css/main.980250b9.chunk.css",
-    "static/js/main.a816c305.chunk.js"
+    "static/js/main.e5554869.chunk.js"
   ]
 }
