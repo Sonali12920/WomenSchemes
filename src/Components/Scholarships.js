@@ -1,5 +1,5 @@
 import React from "react";
-// import db from "../database/items.json";
+import db2 from "../database/items.json";
 import db from "../database/boldtable.json";
 import "../styles/CardComponent.css";
 import { Card, Button, CardGroup } from "react-bootstrap";
@@ -51,6 +51,38 @@ export default function Scholarships() {
           })}
         </CardGroup>
       </div>
+      <CardGroup>
+          {db2.map((el) => {
+            return (
+              <>
+                {/* {el.type === "scholarship" && comparedates(el["end-date"]) > 0  ? ( */}
+                <div class="w-50" className="col-sm-4">
+                  <Card className="card">
+                    <h4>{el.title}</h4>
+                    <p>{el.content}</p>
+                    {/* <p>
+                      <span>
+                        <b>Amount: </b>
+                      </span>
+                      {el.amount}
+                    </p>
+                    <p>
+                      <span>
+                        <b>Available: </b>
+                      </span>
+                      {comparedates(el.deadline)} days to go
+                    </p> */}
+
+                    <Button class="btn btn-primary" href={el.links}>
+                      Link
+                    </Button>
+                  </Card>
+                </div>
+                {/* ) : null} */}
+              </>
+            );
+          })}
+        </CardGroup>
     </div >
   );
 }
