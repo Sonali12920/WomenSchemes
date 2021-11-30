@@ -1,11 +1,12 @@
 .dataResults {
   margin-top: 5px;
-  width: 300px;
+  width: 400px;
   height: 200px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   overflow-y: auto;
+  white-space: nowrap;
 }
 
 .dataResults::-webkit-scrollbar {
@@ -18,4 +19,20 @@
   display: flex;
   align-items: center;
   color: black;
+}
+
+.dataItems {
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  background-color: lightgray;
+}
+
+#clearbtn {
+  cursor: pointer;
 }

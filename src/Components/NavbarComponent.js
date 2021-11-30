@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 import Home from "./Home";
@@ -8,6 +8,7 @@ import Fellowships from "./Fellowships";
 import Internships from "./Internships";
 import Research from "./Research";
 import Filterpage from "./Filterpage";
+import Searchbar from "./Searchbar";
 
 export default function NavbarComponent() {
   return (
@@ -47,16 +48,7 @@ export default function NavbarComponent() {
                   Filterpage
                 </Nav.Link>
               </Nav>
-              <Form style={{ margin: "8px" }} className="d-flex">
-                <FormControl
-                  class="searcbar"
-                  type="search"
-                  placeholder="Search here"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-primary">Search</Button>
-              </Form>
+              <Searchbar />
             </Navbar.Collapse>
           </Navbar>
         </div>
@@ -90,3 +82,14 @@ export default function NavbarComponent() {
     </div>
   );
 }
+
+/*<Form style={{ margin: "8px" }} className="d-flex">
+                <FormControl
+                  class="searcbar"
+                  type="search"
+                  placeholder="Search here"
+                  className="me-2"
+                  aria-label="Search"
+                />
+                <Button variant="outline-primary">Search</Button>
+              </Form>*/
