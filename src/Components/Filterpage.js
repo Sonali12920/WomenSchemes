@@ -3,6 +3,8 @@ import db from "../database/fakedb.json";
 import Filter from "./Filters";
 import { useFilter } from "../utility/useFilter";
 import CardComp from "../Components/CardComponent";
+import { CardGroup } from "react-bootstrap";
+import Noresult from "../images/download.jfif";
 
 function filteringcards(db, filters) {
   let res = [...db];
@@ -87,11 +89,17 @@ const Filterpage = () => {
       </div>
       <div>
         {filteredcards.length === 0 ? (
-          <span style={{ color: "red" }}>No Results...</span>
+          <span style={{ color: "red" }}>
+            <img src={Noresult} alt="No Results..." width="200px" />
+          </span>
         ) : (
-          filteredcards.map((el) => {
-            return <>{CardComp(el)}</>;
-          })
+          <div>
+            <CardGroup>
+              {filteredcards.map((el) => {
+                return <>{CardComp(el)}</>;
+              })}
+            </CardGroup>
+          </div>
         )}
       </div>
     </div>

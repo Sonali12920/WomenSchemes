@@ -1,7 +1,6 @@
 import React from "react";
-
 import { InputGroup } from "react-bootstrap";
-
+import "../styles/CardComponent.css";
 function Filters({ id, name, checked, label, onChange }) {
   return (
     <div>
