@@ -21,10 +21,10 @@ export default function NavbarComponent() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link as={Link} to={"/"}>
+                <Nav.Link as={Link} to={"/WomenSchemes"}>
                   Home
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/scholarships"}>
+                <Nav.Link as={Link} to={"/WomenSchemes/scholarships"}>
                   Scholarships
                 </Nav.Link>
                 {/* <NavDropdown as={Link} to={"/scholarships"} title="Scholarships" id="basic-nav-dropdown">
@@ -34,16 +34,16 @@ export default function NavbarComponent() {
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                                 </NavDropdown> */}
-                <Nav.Link as={Link} to={"/fellowships"}>
+                <Nav.Link as={Link} to={"/WomenSchemes/fellowships"}>
                   Fellowships
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/internships"}>
+                <Nav.Link as={Link} to={"/WomenSchemes/internships"}>
                   Internships
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/research"}>
+                <Nav.Link as={Link} to={"/WomenSchemes/research"}>
                   Research
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/filterpage"}>
+                <Nav.Link as={Link} to={"/WomenSchemes/filterpage"}>
                   Filterpage
                 </Nav.Link>
               </Nav>
@@ -61,12 +61,12 @@ export default function NavbarComponent() {
         </div>
         <div>
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/scholarships" element={<Scholarships />} />
-            <Route exact path="/fellowships" element={<Fellowships />} />
-            <Route exact path="/internships" element={<Internships />} />
-            <Route exact path="/research" element={<Research />} />
-            <Route exact path="/filterpage" element={<Filterpage />} />
+            <Route exact path="/WomenSchemes" element={<Home />} />
+            <Route exact path="/WomenSchemes/scholarships" element={<Scholarships />} />
+            <Route exact path="/WomenSchemes/fellowships" element={<Fellowships />} />
+            <Route exact path="/WomenSchemes/internships" element={<Internships />} />
+            <Route exact path="/WomenSchemes/research" element={<Research />} />
+            <Route exact path="/WomenSchemes/filterpage" element={<Filterpage />} />
           </Routes>
         </div>
       </Router>
