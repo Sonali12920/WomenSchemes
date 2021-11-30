@@ -49,6 +49,7 @@ export default function NavbarComponent() {
               </Nav>
               <Form style={{ margin: "8px" }} className="d-flex">
                 <FormControl
+                  class="searcbar"
                   type="search"
                   placeholder="Search here"
                   className="me-2"
@@ -62,11 +63,27 @@ export default function NavbarComponent() {
         <div>
           <Routes>
             <Route exact path="/WomenSchemes" element={<Home />} />
-            <Route exact path="/WomenSchemes/scholarships" element={<Scholarships />} />
-            <Route exact path="/WomenSchemes/fellowships" element={<Fellowships />} />
-            <Route exact path="/WomenSchemes/internships" element={<Internships />} />
+            <Route
+              exact
+              path="/WomenSchemes/scholarships"
+              element={<Scholarships />}
+            />
+            <Route
+              exact
+              path="/WomenSchemes/fellowships"
+              element={<Fellowships />}
+            />
+            <Route
+              exact
+              path="/WomenSchemes/internships"
+              element={<Internships />}
+            />
             <Route exact path="/WomenSchemes/research" element={<Research />} />
-            <Route exact path="/WomenSchemes/filterpage" element={<Filterpage />} />
+            <Route
+              exact
+              path="/WomenSchemes/filterpage"
+              element={<Filterpage />}
+            />
           </Routes>
         </div>
       </Router>

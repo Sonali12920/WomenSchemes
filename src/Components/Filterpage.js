@@ -36,10 +36,12 @@ function filteringcards(db, filters) {
 const Filterpage = () => {
   const [filter, dispatchFilter] = useFilter({
     scholarship: false,
-    intrenship: false,
+    internship: false,
+    fellowship: false,
+    research: false,
   });
   const filteredcards = filteringcards(db, filter);
-  console.log(filteredcards, "hi");
+  //console.log(filteredcards);
 
   const onCheckClick = useCallback(
     (ev) => {
