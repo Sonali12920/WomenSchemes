@@ -1,6 +1,7 @@
 import React from "react";
 import db2 from "../database/items.json";
 import db from "../database/boldtable.json";
+// import bolddb from "../database/bold.json";
 import "../styles/CardComponent.css";
 import { Card, Button, CardGroup } from "react-bootstrap";
 
@@ -83,6 +84,22 @@ export default function Scholarships() {
             );
           })}
         </CardGroup>
+        {/* <CardGroup>
+          {bolddb.map((el) => {
+            return (
+              <>
+                <div class="w-50" className="col-sm-4">
+                  <Card className="card">
+                    <h4>{el.title}</h4>
+                    <Button class="btn btn-primary" href={el.links}>
+                      Link
+                    </Button>
+                  </Card>
+                </div>
+              </>
+            );
+          })}
+        </CardGroup> */}
     </div >
   );
 }
