@@ -1,5 +1,18 @@
-.filterblock {
-  padding: 0;
-  margin: 0 auto;
-  background-color: transparent;
+.checkbox_div {
+  margin: 5px 10px 5px 10px;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox {
+  background-color: white;
+  min-width: 18px;
+  min-height: 18px;
+  border: 2px solid grey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s linear;
 }

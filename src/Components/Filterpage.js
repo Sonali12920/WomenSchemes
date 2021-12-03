@@ -1,10 +1,12 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState, useMemo } from "react";
 import db from "../database/fakedb.json";
 import Filter from "./Filters";
 import { useFilter } from "../utility/useFilter";
 import CardComp from "../Components/CardComponent";
 import { CardGroup } from "react-bootstrap";
 import Noresult from "../images/download.jfif";
+import "../styles/filter.css";
+import RangeSlider from "./Slider";
 
 function filteringcards(db, filters) {
   let res = [...db];
@@ -34,6 +36,24 @@ function filteringcards(db, filters) {
 }
 
 const Filterpage = () => {
+  const [parentVal, setParentVal] = useState(0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const sliderValueChanged = useCallback((val) => {
+    //console.log("NEW VALUE", val);
+    setParentVal(val);
+  });
+  const sliderProps = useMemo(
+    () => ({
+      min: 0,
+      max: 5000,
+      value: parentVal,
+      step: 2,
+      label: "Amount greater than",
+      onChange: (e) => sliderValueChanged(e),
+    }),
+    [parentVal, sliderValueChanged]
+  );
+  //filterpage
   const [filter, dispatchFilter] = useFilter({
     scholarship: false,
     internship: false,
@@ -103,6 +123,9 @@ const Filterpage = () => {
             </CardGroup>
           </div>
         )}
+      </div>
+      <div>
+        <RangeSlider {...sliderProps} classes="additional-css-classes" />
       </div>
     </div>
   );
