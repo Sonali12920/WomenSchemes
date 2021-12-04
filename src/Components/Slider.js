@@ -2,6 +2,14 @@ import React, { useState, useEffect, memo } from "react";
 import { Card } from "react-bootstrap";
 import db from "../database/fakedb.json";
 
+function changetonumber(string) {
+  var amount = string;
+  var number = Number(amount.replace(/[^0-9.-]+/g, ""));
+  console.log(amount);
+  console.log(number);
+  return number;
+}
+
 //destructive props
 const RangeSlider = ({ classes, label, onChange, value, ...sliderProps }) => {
   //set initial value to 0 this will change inside useEffect in first render also| or you can directly set useState(value)
@@ -25,12 +33,6 @@ const RangeSlider = ({ classes, label, onChange, value, ...sliderProps }) => {
     }
   }, [mouseState, onChange, sliderVal]);
 
-  function changetonumber(string) {
-    var amount = string;
-    var number = Number(amount.replace(/[^0-9.-]+/g, ""));
-    console.log(number);
-    return number;
-  }
   return (
     <div className="range-slider">
       <p>{label}</p>
@@ -49,7 +51,8 @@ const RangeSlider = ({ classes, label, onChange, value, ...sliderProps }) => {
         {db.map((data) => {
           return (
             <>
-              {changetonumber(data.amount.toString()) >= Number(sliderVal) ? (
+              {data.amount !== "" &&
+              changetonumber(data.amount.toString()) >= Number(sliderVal) ? (
                 <Card>{data.title}</Card>
               ) : null}
             </>

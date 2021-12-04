@@ -58,6 +58,7 @@
     "type": "fellowship",
     "startdate": "12-10-2021",
     "deadline": "01-12-2022",
+    "amount": "",
     "content": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
     "link": "https://www.google.com/"
   },
@@ -66,6 +67,7 @@
     "type": "scholarship",
     "startdate": "12-10-2021",
     "deadline": "12-12-2021",
+    "amount": "",
     "content": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
     "link": "https://www.google.com/"
   },
@@ -650,6 +652,7 @@
     "startdate": "12-10-2021",
     "end_date": "12-01-2021",
     "content": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
-    "link": "https://www.google.com/"
+    "link": "https://www.google.com/",
+    "amount": ""
   }
 ]
