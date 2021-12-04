@@ -70,5 +70,14 @@
     "end_date": "12-12-2021",
     "desc": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
     "link": "https://www.google.com/"
+  },
+  {
+    "id": 9,
+    "name": "National Research Fellowship",
+    "type": "research",
+    "apply_date": "12-10-2021",
+    "end_date": "12-01-2021",
+    "desc": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
+    "link": "https://www.google.com/"
   }
 ]
