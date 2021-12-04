@@ -10,9 +10,9 @@ export default function Home() {
       <div class="container-fluid">
         <Header />
         <div>
-          <Row>
+          <Row className="m-4 p-4">
             <h3 className="text-center font-monospace">I'm Looking for</h3>
-            <Col sm={3}>
+            <Col sm={3} classname= "m-3 p-1">
               <Button
                 class="btn"
                 size="sm"
@@ -22,7 +22,7 @@ export default function Home() {
                 Scholarships
               </Button>
             </Col>
-            <Col sm={3}>
+            <Col sm={3} classname= "m-3 p-1">
               <Button
                 class="btn"
                 size="sm"
@@ -32,7 +32,7 @@ export default function Home() {
                 Internships
               </Button>
             </Col>
-            <Col sm={3}>
+            <Col sm={3} classname= "m-3 p-1">
               <Button
                 class="btn"
                 size="sm"
@@ -42,7 +42,7 @@ export default function Home() {
                 Fellowships
               </Button>
             </Col>
-            <Col sm={3}>
+            <Col sm={3} classname= "m-3 p-1">
               <Button
                 class="btn"
                 size="sm"
