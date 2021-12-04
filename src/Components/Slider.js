@@ -53,8 +53,12 @@ const RangeSlider = ({ classes, label, onChange, value, ...sliderProps }) => {
             <>
               {data.amount !== "" &&
               changetonumber(data.amount.toString()) >= Number(sliderVal) ? (
+                <Card>
+                  {data.title} {data.amount}
+                </Card>
+              ) : (
                 <Card>{data.title}</Card>
-              ) : null}
+              )}
             </>
           );
         })}

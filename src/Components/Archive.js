@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { ListGroup, ListGroupItem } from "react-bootstrap";
 import db from "../database/fakedb.json";
 function comparedates(date) {
   var today = new Date();
@@ -15,13 +15,15 @@ function Archive() {
   return (
     <div>
       <h5 className="text-center">Archives -</h5>
-      {db.map((data) => {
-        return comparedates(data.deadline) <= 0 ? (
-          <Card>
-            <a href={data.link}>{data.title}</a>
-          </Card>
-        ) : null;
-      })}
+      <ListGroup>
+        {db.map((data) => {
+          return comparedates(data.deadline) <= 0 ? (
+            <ListGroupItem action tag="a" href={data.link} color="info">
+              {data.title}
+            </ListGroupItem>
+          ) : null;
+        })}
+      </ListGroup>
     </div>
   );
 }
