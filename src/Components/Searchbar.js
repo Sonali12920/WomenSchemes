@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, FormControl, Button } from "react-bootstrap";
 import "../styles/searchbar.css";
-import db from "../database/boldtable.json";
+import db from "../database/fakedb.json";
 function Searchbar() {
   const [filterdata, setFilterdata] = useState([]);
   const handleFilter = (event) => {
@@ -37,7 +37,7 @@ function Searchbar() {
             return (
               <a
                 className="dataItems"
-                href={value.links}
+                href={value.link}
                 target="_blank"
                 rel="noreferrer"
               >

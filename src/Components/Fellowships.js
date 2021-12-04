@@ -18,13 +18,3 @@ export default function Fellowships() {
     </div>
   );
 }
-
-// import React from 'react'
-
-// export default function Fellowships() {
-//     return (
-//         <div>
-//             <h1>Scholarhsips</h1>
-//         </div>
-//     )
-// }

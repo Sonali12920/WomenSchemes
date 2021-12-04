@@ -11,28 +11,51 @@ function comparedates(date) {
 }
 
 export default function CardsComp(el) {
-  let { id, name, apply_date, end_date, desc, link } = el;
+  let { title, amount, startdate, deadline, content, link } = el;
   return (
-    comparedates(end_date) > 0 ? (
-      <div key={id} class="w-50" className="col-sm-4">
+    comparedates(deadline) > 0 ? (
+      <div class="w-50" className="col-sm-4">
         <Card className="card">
-          <h4>{name}</h4>
-          <p>{desc}</p>
-          <p>
+          <h4>{title}</h4>
+
+          <p>{content}</p>
+
+          {amount ? (<p>
             <span>
-              <b>Apply date:</b>
+              <b>Amount: </b>
             </span>
-            {apply_date}
-          </p>
-          <p>
+            {amount}
+          </p>) : <p>
+            <span>
+              <b>Amount: </b>
+            </span>
+            Not available
+          </p>}
+
+          {startdate ? (<p>
+            <span>
+              <b>Apply date: </b>
+            </span>
+            {startdate}
+          </p>) : <p>
+            <span>
+              <b>Apply date: </b>
+            </span>
+            Not available
+          </p>}
+
+          {deadline ? (<p>
             <span>
               <b>Available: </b>
             </span>
-            {comparedates(end_date)} days to go
-            {/* {comparedates(el["end-date"]) > 0
-                      ? `${comparedates(el["end-date"])} days to go `
-                      : "Closed."} */}
-          </p>
+            {comparedates(deadline)} days to go
+          </p>) : <p>
+            <span>
+              <b>Available: </b>
+            </span>
+            Not available
+          </p>}
+
           <Button class="btn btn-primary" href={link}>
             Link
           </Button>

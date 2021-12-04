@@ -1,6 +1,6 @@
 import React, { useState, useEffect, memo } from "react";
 import { Card } from "react-bootstrap";
-import db from "../database/boldtable.json";
+import db from "../database/fakedb.json";
 
 //destructive props
 const RangeSlider = ({ classes, label, onChange, value, ...sliderProps }) => {

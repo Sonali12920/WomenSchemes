@@ -16,9 +16,9 @@ function Archive() {
     <div>
       <h5 className="text-center">Archives -</h5>
       {db.map((data) => {
-        return comparedates(data.end_date) <= 0 ? (
+        return comparedates(data.deadline) <= 0 ? (
           <Card>
-            <a href={data.link}>{data.name}</a>
+            <a href={data.link}>{data.title}</a>
           </Card>
         ) : null;
       })}
