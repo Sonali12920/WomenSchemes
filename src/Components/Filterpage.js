@@ -77,8 +77,9 @@ const Filterpage = () => {
   );
   return (
     <div>
+      
+      <div class="filterblock" className="p-3">
       <h5>Filter </h5>
-      <div class="filterblock">
         <p>Type: </p>
         <Filter
           id="scholarship"
@@ -124,7 +125,7 @@ const Filterpage = () => {
           </div>
         )}
       </div>
-      <div>
+      <div className="p-5">
         <RangeSlider {...sliderProps} classes="additional-css-classes" />
       </div>
     </div>
