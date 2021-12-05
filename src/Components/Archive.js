@@ -11,13 +11,15 @@ function comparedates(date) {
   return diffDays;
 }
 
-function Archive() {
+const Archive = ({ schemetypes }) => {
+  ///console.log(schemetypes);
   return (
     <div>
       <h5 className="text-center">Archives -</h5>
       <ListGroup>
         {db.map((data) => {
-          return comparedates(data.deadline) <= 0 ? (
+          return data.type === schemetypes.toString() &&
+            comparedates(data.deadline) <= 0 ? (
             <ListGroupItem action tag="a" href={data.link} color="info">
               {data.title}
             </ListGroupItem>
@@ -26,6 +28,6 @@ function Archive() {
       </ListGroup>
     </div>
   );
-}
+};
 
 export default Archive;

@@ -24,6 +24,7 @@ export default function Research() {
     }),
     [parentVal, sliderValueChanged]
   );
+
   return (
     <div>
       <h1 style={{ textAlign: "center", margin: "4px" }}>Research</h1>
@@ -44,7 +45,7 @@ export default function Research() {
           </CardGroup>
         </Col>
         <Col md={2}>
-          <Archive />
+          <Archive schemetypes="research" />
         </Col>
       </Row>
     </div>
