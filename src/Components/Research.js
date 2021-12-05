@@ -30,7 +30,11 @@ export default function Research() {
       <Row>
         <Col md={2}>
           {" "}
-          <RangeSlider {...sliderProps} classes="additional-css-classes" />
+          <RangeSlider
+            database={db}
+            {...sliderProps}
+            classes="additional-css-classes"
+          />
         </Col>
         <Col md={8}>
           <CardGroup>
