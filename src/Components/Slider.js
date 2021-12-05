@@ -1,5 +1,6 @@
 import React, { useState, useEffect, memo } from "react";
 import { Card } from "react-bootstrap";
+import CardsComp from "./CardComponent";
 
 function changetonumber(string) {
   var amount = string;
@@ -59,9 +60,7 @@ const RangeSlider = ({
             <>
               {data.amount !== "" ? (
                 changetonumber(data.amount.toString()) >= Number(sliderVal) ? (
-                  <Card>
-                    {data.title} {data.amount}
-                  </Card>
+                  CardsComp(data)
                 ) : null
               ) : (
                 <Card>{data.title}</Card>
