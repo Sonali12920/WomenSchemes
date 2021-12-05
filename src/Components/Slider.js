@@ -1,6 +1,5 @@
 import React, { useState, useEffect, memo } from "react";
 import { Card } from "react-bootstrap";
-import db from "../database/fakedb.json";
 
 function changetonumber(string) {
   var amount = string;
@@ -11,7 +10,14 @@ function changetonumber(string) {
 }
 
 //destructive props
-const RangeSlider = ({ classes, label, onChange, value, ...sliderProps }) => {
+const RangeSlider = ({
+  database,
+  classes,
+  label,
+  onChange,
+  value,
+  ...sliderProps
+}) => {
   //set initial value to 0 this will change inside useEffect in first render also| or you can directly set useState(value)
   const [sliderVal, setSliderVal] = useState(0);
 
@@ -48,14 +54,15 @@ const RangeSlider = ({ classes, label, onChange, value, ...sliderProps }) => {
         onMouseUp={() => setMouseState("up")} // When mouse down set the mouseState to 'up' | now we can call the parent onChnage
       />
       <div>
-        {db.map((data) => {
+        {database.map((data) => {
           return (
             <>
-              {data.amount !== "" &&
-              changetonumber(data.amount.toString()) >= Number(sliderVal) ? (
-                <Card>
-                  {data.title} {data.amount}
-                </Card>
+              {data.amount !== "" ? (
+                changetonumber(data.amount.toString()) >= Number(sliderVal) ? (
+                  <Card>
+                    {data.title} {data.amount}
+                  </Card>
+                ) : null
               ) : (
                 <Card>{data.title}</Card>
               )}

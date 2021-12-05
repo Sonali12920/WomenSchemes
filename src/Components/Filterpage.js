@@ -2,8 +2,8 @@ import React, { useCallback, useState, useMemo } from "react";
 import db from "../database/fakedb.json";
 import Filter from "./Filters";
 import { useFilter } from "../utility/useFilter";
-import CardComp from "../Components/CardComponent";
-import { CardGroup } from "react-bootstrap";
+//import CardComp from "../Components/CardComponent";
+//import { CardGroup } from "react-bootstrap";
 import Noresult from "../images/download.jfif";
 import "../styles/filter.css";
 import RangeSlider from "./Slider";
@@ -77,9 +77,8 @@ const Filterpage = () => {
   );
   return (
     <div>
-      
       <div class="filterblock" className="p-3">
-      <h5>Filter </h5>
+        <h5>Filter </h5>
         <p>Type: </p>
         <Filter
           id="scholarship"
@@ -116,20 +115,25 @@ const Filterpage = () => {
             <img src={Noresult} alt="No Results..." width="200px" />
           </span>
         ) : (
-          <div>
-            <CardGroup>
-              {filteredcards.map((el) => {
-                return <>{CardComp(el)}</>;
-              })}
-            </CardGroup>
-          </div>
+          <div></div>
         )}
       </div>
       <div className="p-5">
-        <RangeSlider {...sliderProps} classes="additional-css-classes" />
+        <RangeSlider
+          database={filteredcards}
+          {...sliderProps}
+          classes="additional-css-classes"
+        />
       </div>
     </div>
   );
 };
 
 export default Filterpage;
+/*
+<CardGroup>
+              {filteredcards.map((el) => {
+                return <>{CardComp(el)}</>;
+              })}
+            </CardGroup>
+            */
