@@ -17,7 +17,7 @@ export default function Home() {
                 class="btn"
                 size="sm"
                 variant="outline-dark"
-                href="./WomenSchemes/scholarships"
+                href="/WomenSchemes/scholarships"
               >
                 Scholarships
               </Button>
@@ -27,7 +27,7 @@ export default function Home() {
                 class="btn"
                 size="sm"
                 variant="outline-dark"
-                href="./WomenSchemes/internships"
+                href="/WomenSchemes/internships"
               >
                 Internships
               </Button>
@@ -37,7 +37,7 @@ export default function Home() {
                 class="btn"
                 size="sm"
                 variant="outline-dark"
-                href="./WomenSchemes/fellowships"
+                href="/WomenSchemes/fellowships"
               >
                 Fellowships
               </Button>
@@ -47,7 +47,7 @@ export default function Home() {
                 class="btn"
                 size="sm"
                 variant="outline-dark"
-                href="./WomenSchemes/research"
+                href="/WomenSchemes/research"
               >
                 Research
               </Button>

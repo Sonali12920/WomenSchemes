@@ -9,22 +9,22 @@ export default function Footer() {
           <div className="col">
             <ul className="list-unstyled">
               <li>
-                <a className="nav-link" href="/scholarships">
+                <a className="nav-link" href="/WomenSchemes/scholarships">
                   Scholarships
                 </a>
               </li>
               <li>
-                <a className="nav-link" href="/internships">
+                <a className="nav-link" href="/WomenSchemes/internships">
                   Internships
                 </a>
               </li>
               <li>
-                <a className="nav-link" href="/fellowships">
+                <a className="nav-link" href="/WomenSchemes/fellowships">
                   Fellowships
                 </a>
               </li>
               <li>
-                <a className="nav-link" href="/research">
+                <a className="nav-link" href="/WomenSchemes/research">
                   Research
                 </a>
               </li>
