@@ -1,18 +1,17 @@
 import React, { useState, useEffect, memo } from "react";
-import { Card } from "react-bootstrap";
+import { CardGroup } from "react-bootstrap";
+import db from "../database/fakedb.json";
 import CardsComp from "./CardComponent";
 
 function changetonumber(string) {
   var amount = string;
   var number = Number(amount.replace(/[^0-9.-]+/g, ""));
-  // console.log(amount);
-  // console.log(number);
+  console.log(number);
   return number;
 }
-
 //destructive props
 const RangeSlider = ({
-  database,
+  schemetype,
   classes,
   label,
   onChange,
@@ -39,17 +38,7 @@ const RangeSlider = ({
       onChange(sliderVal); // when mouse is up then call the parent onChange
     }
   }, [mouseState, onChange, sliderVal]);
-  function datasetting(db) {
-    let data = [];
-    data.title = db.title;
-    data.amount = db.amount;
-    data.link = db.link;
-    data.type = db.type;
 
-    return data;
-  }
-  let sliderdata = [];
-  console.log("slider", sliderdata);
   return (
     <div className="range-slider">
       <p>{label}</p>
@@ -65,19 +54,21 @@ const RangeSlider = ({
         onMouseUp={() => setMouseState("up")} // When mouse down set the mouseState to 'up' | now we can call the parent onChnage
       />
       <div>
-        {database.map((data) => {
-          return (
-            <>
-              {data.amount !== "" ? (
-                changetonumber(data.amount.toString()) >= Number(sliderVal) ? (
-                  sliderdata.push(datasetting(data))
-                ) : null
-              ) : (
-                <Card>{CardsComp(data)}</Card>
-              )}
-            </>
-          );
-        })}
+        <CardGroup>
+          {db.map((data) => {
+            return (
+              <>
+                {(data.amount === " " || data.amount === "") &&
+                data.type === schemetype
+                  ? CardsComp(data)
+                  : changetonumber(data.amount.toString()) >=
+                      Number(sliderVal) && data.type === schemetype
+                  ? CardsComp(data)
+                  : null}
+              </>
+            );
+          })}
+        </CardGroup>
       </div>
     </div>
   );

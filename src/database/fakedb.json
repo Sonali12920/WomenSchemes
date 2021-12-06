@@ -478,9 +478,9 @@
   {
     "title": "Marketing",
     "type": "internship",
-    "amount": "$500",
+    "amount": "$50",
     "startdate": "12-11-2021",
-    "deadline": "11-12-2021",
+    "deadline": "02-02-2021",
     "content": "BYJU'S The Learning App",
     "link": "https://internshala.com/internship/detail/marketing-internship-in-puri-at-byjus-the-learning-app1638008803"
   },
@@ -604,9 +604,9 @@
   {
     "title": "Volunteering",
     "type": "internship",
-    "amount": "$500",
+    "amount": "$100",
     "startdate": "12-11-2021",
-    "deadline": "11-12-2021",
+    "deadline": "11-12-2022",
     "content": "Teach For India",
     "link": "https://internshala.com/internship/detail/volunteering-work-from-home-job-internship-at-teach-for-india1637820757"
   },
@@ -620,29 +620,48 @@
     "link": "https://internshala.com/internship/detail/marketing-internship-in-hyderabad-at-byjus-the-learning-app1637821904"
   },
   {
+    "title": "Research Publication Grant in STEM",
+    "type": "research",
+    "startdate": "10-01-2021",
+    "deadline": "02-01-2022",
+    "content": "They are open to women scholars conducting basic research in engineering, medicine or the physical or biological sciences and who have a doctorate degree in one of those fields. The grantee must publish their research in a scholarly publication and be listed as a primary author.",
+    "amount": "$10,000",
+    "link": "https://www.aauw.org/resources/programs/fellowships-grants/current-opportunities/research-publication-grants/"
+  },
+  {
     "title": "Business Development (Sales)",
     "type": "internship",
-    "amount": "$500",
+    "amount": "$700",
     "startdate": "12-11-2021",
-    "deadline": "11-12-2021",
+    "deadline": "01-11-2022",
     "content": "Decathlon Sports India",
     "link": "https://internshala.com/internship/detail/business-development-sales-internship-in-kottayam-at-decathlon-sports-india1637644254"
   },
   {
     "title": "Operations",
     "type": "internship",
-    "amount": "$500",
+    "amount": "$00",
     "startdate": "12-11-2021",
-    "deadline": "11-12-2021",
+    "deadline": "01-12-2022",
     "content": "Reliance Brands Limited",
     "link": "https://internshala.com/internship/detail/operations-internship-in-bangalore-at-reliance-brands-limited1637749690"
   },
   {
+    "title": "SERB - POWER Research Grants",
+    "type": "research",
+    "link": "https://serbonline.in/SERB/serbPowerInstructions",
+    "amount": "",
+    "startdate": "06-22-2021",
+    "deadline": "03-06-2022",
+    "end_date": "",
+    "content": "This scheme aims to encourage emerging and eminent women researchers for individual-centric and competitive mode of research funding to undertake R&D activities in frontier areas of science and engineering. POWER Grants will empower women researchers by funding them under following two categories- Level I- The scale of funding upto 60 Lakhs for three years. Level II: The scale of funding upto 30 Lakhs for three years"
+  },
+  {
     "title": "Product Management",
     "type": "internship",
-    "amount": "$500",
+    "amount": "$20",
     "startdate": "12-11-2021",
-    "deadline": "11-12-2021",
+    "deadline": "12-12-2021",
     "content": "CBRE South Asia Private Limited",
     "link": "https://internshala.com/internship/detail/product-management-internship-in-gurgaon-hyderabad-at-cbre-south-asia-private-limited1637661863"
   },
@@ -673,22 +692,13 @@
     "link": "https://www.pathwaystoscience.org/programhub.aspx?sort=SUM-IndianaU-HBCU-STEM",
     "amount": "$4,000"
   },
-  {
-    "title": "SERB - POWER Research Grants",
-    "type": "research",
-    "link": "https://serbonline.in/SERB/serbPowerInstructions",
-    "amount": "",
-    "startdate": "06-22-2004",
-    "deadline": "",
-    "content": "This scheme aims to encourage emerging and eminent women researchers for individual-centric and competitive mode of research funding to undertake R&D activities in frontier areas of science and engineering. POWER Grants will empower women researchers by funding them under following two categories- Level I- The scale of funding upto 60 Lakhs for three years. Level II: The scale of funding upto 30 Lakhs for three years"
-  },
+
   {
     "title": "SERB - POWER Fellowship",
     "content": "This Fellowship will identify and reward outstanding women researchers and innovators working in Indian academic institutions and R&D laboratories, holding Ph.D.degree in any branch of science and engineering.",
     "startdate": "",
     "amount": "$14,000",
-    "deadline": "",
-    "end_date": "",
+    "end_date": "11-12-2021",
     "type": "fellowship",
     "link": "https://serbonline.in/SERB/serbPowerInstructions"
   }

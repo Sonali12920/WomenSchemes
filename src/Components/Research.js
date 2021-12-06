@@ -1,12 +1,12 @@
 import React, { useCallback, useMemo, useState } from "react";
-import db from "../database/fakedb.json";
-import { CardGroup, Row, Col } from "react-bootstrap";
-import CardsComp from "./CardComponent";
+//import db from "../database/fakedb.json";
+import { Row, Col } from "react-bootstrap";
+//import CardsComp from "./CardComponent";
 import Archive from "./Archive";
 import RangeSlider from "./Slider";
-// import "../styles/Card.css";
+import "../styles/CardComponent.css";
 
-export default function Research(props) {
+export default function Research() {
   const [parentVal, setParentVal] = useState(0);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const sliderValueChanged = useCallback((val) => {
@@ -15,7 +15,7 @@ export default function Research(props) {
   const sliderProps = useMemo(
     () => ({
       min: 0,
-      max: 2000,
+      max: 5000,
       value: parentVal,
       step: 2,
       label: "Scheme amount greater than ",
@@ -28,20 +28,12 @@ export default function Research(props) {
     <div>
       <h1 style={{ textAlign: "center", margin: "4px" }}>Research</h1>
       <Row>
-        <Col md={2}>
-          {" "}
+        <Col md={10}>
           <RangeSlider
-            database={db}
+            schemetype="research"
             {...sliderProps}
             classes="additional-css-classes"
           />
-        </Col>
-        <Col md={8}>
-          <CardGroup>
-            {db.map((el) => {
-              return <>{el.type === "research" ? CardsComp(el) : null}</>;
-            })}
-          </CardGroup>
         </Col>
         <Col md={2}>
           <Archive schemetypes="research" />

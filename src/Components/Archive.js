@@ -6,7 +6,6 @@ function comparedates(date) {
   const date1 = new Date(date);
   const date2 = new Date(today);
   let diffTime = 0;
-  console.log(date1.getDate(), date2.getMonth());
   if (
     date1.getFullYear() === date2.getFullYear() &&
     date1.getMonth() <= date2.getMonth()

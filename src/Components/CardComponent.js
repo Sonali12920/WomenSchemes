@@ -6,7 +6,6 @@ function comparedates(date) {
   const date1 = new Date(date);
   const date2 = new Date(today);
   let diffTime = 0;
-  console.log(date1.getDate(), date2.getMonth());
   if (
     date1.getFullYear() === date2.getFullYear() &&
     date1.getMonth() <= date2.getMonth()
@@ -20,7 +19,7 @@ function comparedates(date) {
 }
 
 export default function CardsComp(el) {
-  let { title, amount, startdate, deadline, content, link } = el;
+  let { title, amount, startdate, end_date, deadline, content, link } = el;
   return comparedates(deadline) > 0 ? (
     <div class="w-50" className="col-sm-4">
       <Card className="card">
@@ -60,7 +59,7 @@ export default function CardsComp(el) {
           </p>
         )}
 
-        {deadline ? (
+        {deadline || end_date ? (
           <p>
             <span>
               <b>Available: </b>

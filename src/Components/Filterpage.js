@@ -45,9 +45,9 @@ const Filterpage = () => {
   const sliderProps = useMemo(
     () => ({
       min: 0,
-      max: 5000,
+      max: 2000,
       value: parentVal,
-      step: 2,
+      step: 10,
       label: "Amount greater than",
       onChange: (e) => sliderValueChanged(e),
     }),
@@ -120,7 +120,7 @@ const Filterpage = () => {
       </div>
       <div className="p-5">
         <RangeSlider
-          database={filteredcards}
+          schemetype="scholarship"
           {...sliderProps}
           classes="additional-css-classes"
         />

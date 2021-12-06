@@ -1,28 +1,44 @@
-import React from "react";
-import { CardGroup, Row, Col } from "react-bootstrap";
-import db from "../database/fakedb.json";
-import CardsComp from "./CardComponent";
-import "../styles/CardComponent.css";
+import React, { useCallback, useMemo, useState } from "react";
+//import db from "../database/fakedb.json";
+import { Row, Col } from "react-bootstrap";
+//import CardsComp from "./CardComponent";
 import Archive from "./Archive";
+import RangeSlider from "./Slider";
+import "../styles/CardComponent.css";
 
-export default function Scholarships() {
+export default function Research() {
+  const [parentVal, setParentVal] = useState(0);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const sliderValueChanged = useCallback((val) => {
+    setParentVal(val);
+  });
+  const sliderProps = useMemo(
+    () => ({
+      min: 0,
+      max: 2000,
+      value: parentVal,
+      step: 2,
+      label: "Scheme amount greater than ",
+      onChange: (e) => sliderValueChanged(e),
+    }),
+    [parentVal, sliderValueChanged]
+  );
+
   return (
     <div>
-      <h1 style={{ textAlign: "center", margin: "4px" }}>Scholarships</h1>
-      <div>
-        <Row>
-          <Col md={10}>
-            <CardGroup>
-              {db.map((el) => {
-                return <>{el.type === "scholarship" ? CardsComp(el) : null}</>;
-              })}
-            </CardGroup>
-          </Col>
-          <Col md={2}>
-            <Archive schemetypes="scholarship" />
-          </Col>
-        </Row>
-      </div>
+      <h1 style={{ textAlign: "center", margin: "4px" }}>Scholarship</h1>
+      <Row>
+        <Col md={10}>
+          <RangeSlider
+            schemetype="scholarship"
+            {...sliderProps}
+            classes="additional-css-classes"
+          />
+        </Col>
+        <Col md={2}>
+          <Archive schemetypes="scholarship" />
+        </Col>
+      </Row>
     </div>
   );
 }
