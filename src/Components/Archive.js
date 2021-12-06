@@ -5,9 +5,18 @@ function comparedates(date) {
   var today = new Date();
   const date1 = new Date(date);
   const date2 = new Date(today);
-  const diffTime = -(date2 - date1);
+  let diffTime = 0;
+  console.log(date1.getDate(), date2.getMonth());
+  if (
+    date1.getFullYear() === date2.getFullYear() &&
+    date1.getMonth() <= date2.getMonth()
+  ) {
+    diffTime = -(date2 - date1);
+  } else {
+    diffTime = Math.abs(date2 - date1);
+  }
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  console.log(diffDays);
+  //console.log(diffDays);
   return diffDays;
 }
 
@@ -19,7 +28,8 @@ const Archive = ({ schemetypes }) => {
       <ListGroup>
         {db.map((data) => {
           return data.type === schemetypes.toString() &&
-            comparedates(data.deadline) <= 0 ? (
+            (comparedates(data.deadline) <= 0 ||
+              comparedates(data.end_date) <= 0) ? (
             <ListGroupItem action tag="a" href={data.link} color="info">
               {data.title}
             </ListGroupItem>

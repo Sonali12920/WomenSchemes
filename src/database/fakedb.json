@@ -654,5 +654,42 @@
     "content": "A scholarship is an award of financial aid for a student to further their education at a private elementary or secondary school, or a private or public",
     "link": "https://www.google.com/",
     "amount": ""
+  },
+  {
+    "title": "Women Overseas Fellowship",
+    "type": "fellowship",
+    "startdate": "12-10-2021",
+    "deadline": "12-03-2021",
+    "content": "Indian women applicant having Ph.D. degree in Basic Sciences, Engineering or Technology including Agricultural and Medical Sciences and holding a regular position at any recognized academic institution/ R&D institute/ university/ college in India. ",
+    "link": "https://www.iusstf.org/program/indo-us-fellowship-for-women-in-stemm",
+    "amount": "$3,000"
+  },
+  {
+    "title": "STEM Summer Scholars Institute (SSI)",
+    "type": "research",
+    "content": "The Summer Scholars Institute, an eight-week program held at the IU Bloomington and IUPUI campuses, enrolls select students from IU and partner Minority Serving Institutions (MSIs). These STEM Scholars engage in continuous, substantive research at the Summer Scholars Institute and their universities.",
+    "deadline": "02-15-2022",
+    "startdate": " ",
+    "link": "https://www.pathwaystoscience.org/programhub.aspx?sort=SUM-IndianaU-HBCU-STEM",
+    "amount": "$4,000"
+  },
+  {
+    "title": "SERB - POWER Research Grants",
+    "type": "research",
+    "link": "https://serbonline.in/SERB/serbPowerInstructions",
+    "amount": "",
+    "startdate": "06-22-2004",
+    "deadline": "",
+    "content": "This scheme aims to encourage emerging and eminent women researchers for individual-centric and competitive mode of research funding to undertake R&D activities in frontier areas of science and engineering. POWER Grants will empower women researchers by funding them under following two categories- Level I- The scale of funding upto 60 Lakhs for three years. Level II: The scale of funding upto 30 Lakhs for three years"
+  },
+  {
+    "title": "SERB - POWER Fellowship",
+    "content": "This Fellowship will identify and reward outstanding women researchers and innovators working in Indian academic institutions and R&D laboratories, holding Ph.D.degree in any branch of science and engineering.",
+    "startdate": "",
+    "amount": "$14,000",
+    "deadline": "",
+    "end_date": "",
+    "type": "fellowship",
+    "link": "https://serbonline.in/SERB/serbPowerInstructions"
   }
 ]

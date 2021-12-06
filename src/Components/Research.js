@@ -6,11 +6,10 @@ import Archive from "./Archive";
 import RangeSlider from "./Slider";
 // import "../styles/Card.css";
 
-export default function Research() {
+export default function Research(props) {
   const [parentVal, setParentVal] = useState(0);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const sliderValueChanged = useCallback((val) => {
-    //console.log("NEW VALUE", val);
     setParentVal(val);
   });
   const sliderProps = useMemo(
@@ -19,7 +18,7 @@ export default function Research() {
       max: 2000,
       value: parentVal,
       step: 2,
-      label: "Amount greater than ",
+      label: "Scheme amount greater than ",
       onChange: (e) => sliderValueChanged(e),
     }),
     [parentVal, sliderValueChanged]
@@ -40,7 +39,7 @@ export default function Research() {
         <Col md={8}>
           <CardGroup>
             {db.map((el) => {
-              return <>{CardsComp(el)}</>;
+              return <>{el.type === "research" ? CardsComp(el) : null}</>;
             })}
           </CardGroup>
         </Col>

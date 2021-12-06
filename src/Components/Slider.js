@@ -5,8 +5,8 @@ import CardsComp from "./CardComponent";
 function changetonumber(string) {
   var amount = string;
   var number = Number(amount.replace(/[^0-9.-]+/g, ""));
-  console.log(amount);
-  console.log(number);
+  // console.log(amount);
+  // console.log(number);
   return number;
 }
 
@@ -39,7 +39,17 @@ const RangeSlider = ({
       onChange(sliderVal); // when mouse is up then call the parent onChange
     }
   }, [mouseState, onChange, sliderVal]);
+  function datasetting(db) {
+    let data = [];
+    data.title = db.title;
+    data.amount = db.amount;
+    data.link = db.link;
+    data.type = db.type;
 
+    return data;
+  }
+  let sliderdata = [];
+  console.log("slider", sliderdata);
   return (
     <div className="range-slider">
       <p>{label}</p>
@@ -60,10 +70,10 @@ const RangeSlider = ({
             <>
               {data.amount !== "" ? (
                 changetonumber(data.amount.toString()) >= Number(sliderVal) ? (
-                  CardsComp(data)
+                  sliderdata.push(datasetting(data))
                 ) : null
               ) : (
-                <Card>{data.title}</Card>
+                <Card>{CardsComp(data)}</Card>
               )}
             </>
           );
