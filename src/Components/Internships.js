@@ -27,7 +27,7 @@ export default function Research() {
   return (
     <div>
       <h1 style={{ textAlign: "center", margin: "4px" }}>Internship</h1>
-      <Row>
+      <Row className="m-2 p-3">
         <Col md={10}>
           <RangeSlider
             schemetype="internship"
