@@ -25,7 +25,7 @@ export default function CardsComp(el) {
       <Card className="card">
         <h4>{title}</h4>
 
-        <p>{content}</p>
+        <p class="content">{content}</p>
 
         {amount ? (
           <p>

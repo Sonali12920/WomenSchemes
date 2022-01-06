@@ -42,7 +42,7 @@ const RangeSlider = ({
   return (
     <div className="range-slider">
       <p>{label}</p>
-      <h3>value: {sliderVal}</h3>
+      <h5>value: {sliderVal}</h5>
       <input
         type="range"
         value={sliderVal}
